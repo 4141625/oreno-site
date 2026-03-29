@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 検索用メタ情報 -->
+  <meta name="description" content="俺のオリジナルホームページ。趣味や活動、連絡先を紹介。">
+  <meta name="keywords" content="俺,ホームページ,趣味,プログラミング,ゲーム,音楽">
+
   <title>俺のHP</title>
   <style>
     /* 全体背景 */
@@ -51,6 +56,27 @@
       border-radius: 5px;
     }
 
+    /* 検索バー */
+    #searchBox {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+      margin-right: 5px;
+    }
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
     /* メイン */
     main {
       display: flex;
@@ -97,6 +123,12 @@
     <a href="ore.html">俺のページ</a>
   </nav>
 
+  <!-- サイト内検索 -->
+  <div style="text-align:center; margin:20px;">
+    <input type="text" id="searchBox" placeholder="検索ワードを入力">
+    <button onclick="searchContent()">検索</button>
+  </div>
+
   <main>
     <div class="card">
       <h2>自己紹介</h2>
@@ -122,5 +154,23 @@
   <footer>
     &copy; 2026 俺のHP
   </footer>
+
+  <script>
+  function searchContent() {
+    const keyword = document.getElementById('searchBox').value.toLowerCase();
+    const cards = document.querySelectorAll('main .card');
+    let found = false;
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      if (text.includes(keyword)) {
+        card.style.display = 'block';
+        found = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    if (!found) alert('該当する内容はありません');
+  }
+  </script>
 </body>
 </html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>俺のHP</title>
+  <style>
+    /* 全体背景 */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+    }
+
+    /* ヘッダー */
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+      background-size: cover;
+      box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    /* ナビゲーション */
+    nav {
+      background-color: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #fff;
+      color: #333;
+      border-radius: 5px;
+    }
+
+    /* メイン */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    /* カード風セクション */
+    .card {
+      background-color: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255,255,255,0.2);
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.7);
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>俺のHP</h1>
+    <p>クールなオリジナルホームページ</p>
+  </header>
+
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="ore.html">俺のページ</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>自己紹介</h2>
+      <p>こんにちは！俺のオリジナルHPへようこそ。趣味や活動を紹介していきます。</p>
+    </div>
+
+    <div class="card">
+      <h2>趣味</h2>
+      <ul>
+        <li>プログラミング</li>
+        <li>ゲーム</li>
+        <li>音楽</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>連絡先</h2>
+      <p>メール: example@gmail.com</p>
+      <p>Twitter: @example</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 俺のHP
+  </footer>
+</body>
+</html>
